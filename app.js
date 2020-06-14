@@ -1,12 +1,13 @@
-const express =require('express');
 const http = require('http');
-const  app= express();
 
-
+cosnt port =process.env.PORT || 3000
  const server=http.createServer((req,res)=>{
      res.write('<html><head></head><body><h1>Welcome  to nodejs !!</h1></body></html>');
  });
-server.listen(3001);
+server.listen(port,()=>{
+
+ console.log('server running at port ' + port);
+});
 
 
     
